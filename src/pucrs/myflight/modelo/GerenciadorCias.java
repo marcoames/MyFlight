@@ -8,4 +8,11 @@ public class GerenciadorCias {
 	public GerenciadorCias() {
 		empresas = new ArrayList<>();
 	}
+	
+	public ArrayList<CiaAerea> listarTodas(){
+	ArrayList<CiaAerea> aux = new ArrayList<>();
+	for(CiaAerea cia : empresas)	
+		aux.add(cia);
+	return aux;
+	}
 }
