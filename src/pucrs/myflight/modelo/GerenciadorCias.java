@@ -1,5 +1,4 @@
 package pucrs.myflight.modelo;
-
 import java.util.ArrayList;
 
 public class GerenciadorCias {
@@ -10,9 +9,9 @@ public class GerenciadorCias {
 	}
 	
 	public ArrayList<CiaAerea> listarTodas(){
-	ArrayList<CiaAerea> aux = new ArrayList<>();
-	for(CiaAerea cia : empresas)	
-		aux.add(cia);
-	return aux;
+		ArrayList<CiaAerea> aux = new ArrayList<>();
+		for(CiaAerea cia : empresas)
+			aux.add(cia);
+		return aux;
 	}
 }

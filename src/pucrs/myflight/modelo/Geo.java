@@ -17,18 +17,27 @@ public class Geo {
 		return longitude;
 	}
 
-	public double distancia(Geo ponto1, Geo ponto2) {
-	double cos1 = Math.cos(Math.toRadians(ponto1.latitude));  // Coseno do ponto1 transformado de graus em radianos
-	double cos2 = Math.cos(Math.toRadians(ponto2.latitude));  // Coseno do ponto2 transformado de graus em radianos
-    double sen1 = Math.sin(Math.toRadians(ponto1.longitude)); // Seno do ponto1 transformado de graus em radianos
-	double sen2 = Math.sin(Math.toRadians(ponto2.longitude)); // Seno do ponto2 transformado de graus em radianos
+	public static double distancia(Geo ponto1, Geo ponto2) {
 
-	double aux = Math.pow(cos2 - cos1 / 2, 2) +
-				 Math.pow(sen2 - sen1 / 2, 2) *
-				 cos1 * cos2;
-	double raio = 6371;
-	double dist = 	2 * Math.asin(Math.sqrt(aux));
-	return dist;
+		//Transforma em radianos
+		double lat1 = Math.toRadians(ponto1.getLatitude());
+		double lat2 = Math.toRadians(ponto2.getLatitude());
+		double lon1 = Math.toRadians(ponto1.getLongitude());
+		double lon2 = Math.toRadians(ponto2.getLongitude());
 
+		//Calcula seno e cosseno
+		double senLat = Math.sin(lat1 - lat2 / 2);
+		double senLon = Math.sin(lon1 - lon2 / 2);
+		double cos1 = Math.cos(lat1);
+		double cos2 = Math.cos(lat2);
+
+		//Resolve a equação dentro da raiz
+		double aux = Math.pow(senLat, 2) +
+					 Math.pow(senLon, 2) *
+					 cos1 * cos2;
+
+		double raio = 6371; //Raio da Terra
+		double dist = 2 * Math.asin(Math.sqrt(aux));
+		return dist;
 	}
 }
