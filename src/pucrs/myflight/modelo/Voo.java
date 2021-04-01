@@ -42,7 +42,8 @@ public class Voo {
 	public Status getStatus() {
 		return status;
 	}
-	
+
+	//Muda status do Voo
 	public void setStatus(Status novo) {
 		this.status = novo;
 	}
