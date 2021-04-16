@@ -7,17 +7,29 @@ public class GerenciadorCias {
 	public GerenciadorCias() {
 		empresas = new ArrayList<>();
 	}
-	
-	public ArrayList<CiaAerea> listarTodas(){
+
+	public void adicionar(CiaAerea cia) {
+		empresas.add(cia);
+	}
+
+	public ArrayList<CiaAerea> listarTodas() {
 		ArrayList<CiaAerea> aux = new ArrayList<>();
 		for (CiaAerea cia : empresas)
 			aux.add(cia);
 		return aux;
 	}
 
-	public CiaAerea buscarCodigo(String cod){
+	public CiaAerea buscarCodigo(String cod) {
 		for (CiaAerea cia : empresas) {
 			if (cia.getCodigo().equals(cod))
+				return cia;
+		}
+		return null;
+	}
+
+	public CiaAerea buscarNome(String nome) {
+		for (CiaAerea cia : empresas) {
+			if (cia.getNome().equals(nome))
 				return cia;
 		}
 		return null;

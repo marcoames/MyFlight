@@ -8,14 +8,18 @@ public class GerenciadorAeronaves {
         Aeronaves = new ArrayList<>();
     }
 
-    public ArrayList<Aeronave> listarTodas(){
+    public void adicionar(Aeronave aviao) {
+        Aeronaves.add(aviao);
+    }
+
+    public ArrayList<Aeronave> listarTodas() {
         ArrayList<Aeronave> aux = new ArrayList<Aeronave>();
         for(Aeronave aNav : Aeronaves)
             aux.add(aNav);
         return aux;
     }
 
-    public Aeronave buscarPorCodigo(String cod){
+    public Aeronave buscarPorCodigo(String cod) {
         for (Aeronave aero: Aeronaves) {
             if (aero.getCodigo().equals(cod))
                 return aero;
