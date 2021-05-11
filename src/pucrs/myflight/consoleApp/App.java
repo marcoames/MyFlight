@@ -28,6 +28,5 @@ public class App {
 		double distanciaGeo = Geo.distancia(portoAlegre.getLocal(),saoPaulo.getLocal());
 		System.out.println("Distancia entre POA e SP: " + distanciaGeo);
 
-
 	}
 }

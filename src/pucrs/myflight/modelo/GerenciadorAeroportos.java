@@ -1,4 +1,5 @@
 package pucrs.myflight.modelo;
+
 import java.util.ArrayList;
 
 public class GerenciadorAeroportos {
@@ -14,7 +15,7 @@ public class GerenciadorAeroportos {
 
     public ArrayList<Aeroporto> listarTodas() {
         ArrayList<Aeroporto> aux = new ArrayList<Aeroporto>();
-        for(Aeroporto aero : Aeroportos)
+        for (Aeroporto aero : Aeroportos)
             aux.add(aero);
         return aux;
     }
@@ -25,6 +26,12 @@ public class GerenciadorAeroportos {
                 return aero;
         }
         return null;
+    }
+
+    public ArrayList<Aeroporto> ordenaNome(){
+        ArrayList<Aeroporto> aux = new ArrayList<>();
+        aux.sort(Aeroporto::compareTo);
+        return aux;
     }
 
 }

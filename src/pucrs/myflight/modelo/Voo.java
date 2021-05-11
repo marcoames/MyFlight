@@ -31,7 +31,7 @@ public class Voo {
 		return rota;
 	}
 	
-	public LocalDateTime getDatahora() {
+	public LocalDateTime getDataHora() {
 		return datahora;
 	}
 	
