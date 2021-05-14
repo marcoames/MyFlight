@@ -2,7 +2,7 @@ package pucrs.myflight.modelo;
 
 import java.util.ArrayList;
 
-public class GerenciadorRotas {
+public class    GerenciadorRotas {
     private ArrayList<Rota> Rotas;
 
     public GerenciadorRotas() {

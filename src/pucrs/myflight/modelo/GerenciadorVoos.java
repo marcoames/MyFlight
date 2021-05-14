@@ -23,7 +23,7 @@ public class GerenciadorVoos {
 
     public ArrayList<Voo> buscarData(LocalDateTime data) {
         for (Voo voo1 : voos) {
-            if (voo1.getDatahora().equals(data))
+            if (voo1.getDataHora().equals(data))
                 return voos;
         }
         return null;
