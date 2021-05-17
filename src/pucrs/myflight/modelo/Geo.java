@@ -37,7 +37,11 @@ public class Geo {
 					 cos1 * cos2;
 
 		double raio = 6371; //Raio da Terra
-		double dist = 2 * Math.asin(Math.sqrt(aux));
-		return dist;
+		return 2 * Math.asin(Math.sqrt(aux));
+	}
+
+	@Override
+	public String toString() {
+		return latitude + "," + longitude ;
 	}
 }

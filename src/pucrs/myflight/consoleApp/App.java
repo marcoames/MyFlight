@@ -1,13 +1,17 @@
 package pucrs.myflight.consoleApp;
 
 import pucrs.myflight.modelo.*;
+
+import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("MyFlight project....");
+
+	/*
 
 		//Cria cias aéreas
 		CiaAerea c1 = new CiaAerea("JJ","LATAM Linhas Aéreas");
@@ -42,7 +46,6 @@ public class App {
 		Rota r3 = new Rota(c3,miami,lisbon,a1);
 		Rota r4 = new Rota(c1,saoPaulo,miami,a3);
 
-
 		//Cria Voos
 		Voo v1 = new Voo(r1,LocalDateTime.of(2016,8,10,8,0),Duration.ofMinutes(90));
 		v1.setStatus(Voo.Status.ATRASADO);
@@ -50,10 +53,22 @@ public class App {
 		v2.setStatus(Voo.Status.CONFIRMADO);
 		Voo v3 = new VooEscalas(r1,r2,LocalDateTime.now(),Duration.ofMinutes(60));
 
-
 		System.out.println("Voo1: " + v1);
 		System.out.println("Voo2: " + v2);
 		System.out.println("Voo3: " + v3);
 
+	*/
+
+		GerenciadorCias empresas = new GerenciadorCias();
+		empresas.carregaDados();
+		empresas.listarTodas();
+
+		GerenciadorAeroportos aeroportos = new GerenciadorAeroportos();
+		aeroportos.carregaDados();
+		aeroportos.listarTodas();
+
+		GerenciadorAeronaves aeronaves = new GerenciadorAeronaves();
+		aeronaves.carregaDados();
+		aeronaves.listarTodas();
 	}
 }
