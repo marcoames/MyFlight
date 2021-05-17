@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class App {
 
 	public static void main(String[] args) {
-		System.out.println("MyFlight project...");
+		System.out.println("MyFlight project....");
 
 		//Cria cias aéreas
 		CiaAerea c1 = new CiaAerea("JJ","LATAM Linhas Aéreas");
@@ -46,7 +46,7 @@ public class App {
 		//Cria Voos
 		Voo v1 = new Voo(r1,LocalDateTime.of(2016,8,10,8,0),Duration.ofMinutes(90));
 		v1.setStatus(Voo.Status.ATRASADO);
-		Voo v2 = new Voo(r2,LocalDateTime.of(2016,8,10,15,00),Duration.ofMinutes(120));
+		Voo v2 = new Voo(r2,LocalDateTime.of(2016,8,10,15,0),Duration.ofMinutes(120));
 		v2.setStatus(Voo.Status.CONFIRMADO);
 		Voo v3 = new VooEscalas(r1,r2,LocalDateTime.now(),Duration.ofMinutes(60));
 
