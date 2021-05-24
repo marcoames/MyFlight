@@ -75,6 +75,7 @@ public class App {
 
 		GerenciadorRotas rotas = new GerenciadorRotas();
 		rotas.carregaDados();
-		//rotas.listarTodas();
+		System.out.println("Rotas: ");
+		rotas.listarTodas();
 	}
 }

@@ -38,7 +38,7 @@ public class    GerenciadorRotas {
     }
 
     public void carregaDados() throws IOException {
-        Path path1 = Paths.get("routes.dat");
+        Path path1 = Paths.get("src/pucrs/myflight/modelo/routes.dat");
         try (BufferedReader reader = Files.newBufferedReader(path1, Charset.forName("utf8"))) {
             reader.readLine(); // Ignora 1 linha
             String line = null;
