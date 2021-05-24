@@ -65,10 +65,16 @@ public class App {
 
 		GerenciadorAeroportos aeroportos = new GerenciadorAeroportos();
 		aeroportos.carregaDados();
+		System.out.println("Aeroportos: ");
 		aeroportos.listarTodas();
 
 		GerenciadorAeronaves aeronaves = new GerenciadorAeronaves();
 		aeronaves.carregaDados();
+		System.out.println("Aeronaves: ");
 		aeronaves.listarTodas();
+
+		GerenciadorRotas rotas = new GerenciadorRotas();
+		rotas.carregaDados();
+		//rotas.listarTodas();
 	}
 }
